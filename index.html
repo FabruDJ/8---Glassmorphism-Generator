@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css/normalize.css">
+    <link rel="stylesheet" href="./styles.css/style.css">
+    <title>Glassmorphism Generator</title>
+</head>
+<body>
+    <div class="container-title">
+        <h1 class="title">Glassmorphism Generator</h1>
+        <p class="subtitle">FabruDev</p>
+    </div>
+
+    <div class="main">
+        <div class="controls-container bg-container">
+            <h3 class="titles">Controles</h3>
+            <div class="control-container control-color">
+                <p>Color</p>
+                <input type="color" id="color" value="#ffffff">
+            </div>
+            <div class="control-container">
+                <div class="control-text">
+                    <p>Transparencia</p>
+                    <div class="counter-transp">
+                        <p>1</p>
+                    </div>
+                </div>
+                <input type="range" class="range" min="0" max="1" step="0.01" value="1"  id="transparencia">
+            </div>
+            <div class="control-container">
+                <div class="control-text">
+                    <p>Blur</p>
+                    <div class="counter-blur">
+                        <p>0px</p>
+                    </div>
+                </div>
+                <input type="range" class="range" min="0" max="20" step="1" value="0" id="blur">
+            </div>
+            <div class="control-container">
+                <div class="control-text">
+                    <p>Contraste</p>
+                    <p>50%</p>
+                </div>
+                <input type="range" class="range" min="0" max="100" step="1">
+            </div>
+            <div class="control-container">
+                <div class="control-text">
+                    <p>Borde</p>
+                    <div class="counter-border">
+                        <!-- HTML INYECCION -->
+                    </div>
+                </div>
+                <input type="range" class="range" min="0" max="100" step="1" value="0">
+            </div>
+        </div>
+        <div class="result-container bg-container">
+            <h3 class="titles resultado-title">Resultado</h3>
+            <div class="container-result">
+                <div class="result"></div>
+                <div class="container-code-result">
+                    <p class="code-result"> background-color: rgba(255, 255, 255, 0.21); <br>
+                        backdrop-filter: blur(88px); <br>
+                        backdrop-filter: contrast(9%); <br>
+                        backdrop-filter: saturate(14%); <br>
+                        backdrop-filter: invert(12%);</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./scripts/script.js"></script>
+</html>
